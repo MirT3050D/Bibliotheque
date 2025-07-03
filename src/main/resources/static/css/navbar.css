@@ -1,0 +1,40 @@
+/* Style du nav */
+nav {
+    background-color: #2C3E50; /* Bleu foncé */
+    padding: 10px 20px;
+}
+
+/* Liste horizontale */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Items de la liste */
+nav ul li {
+    /* Optionnel : alignement vertical si besoin */
+    display: flex;
+    align-items: center;
+}
+
+/* Liens */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #4B4F2B; /* Vert olive foncé (ton secondaire) */
+    outline: none;
+    color: white;
+}
