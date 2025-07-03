@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class AccueilController {
     @GetMapping("/login")
-    public String Login()
+    public String goLogin()
     {
         return "login";
     }

@@ -14,7 +14,13 @@ public class MembreService {
         this.membreRepository = membreRepository;
     }
 
-    public Membre save(Membre membre) {
+    public Membre save(Membre membre) throws RuntimeException {
+        if(membreRepository.findByAdresseMail(membre.getAdresseMail()) != null) {
+            throw new RuntimeException("Un membre avec cet email existe déjà");
+        }
+        if(membre.getMdp() == null || membre.getMdp().isEmpty()) {
+            throw new RuntimeException("Le mot de passe ne peut pas être vide");
+        }
         return membreRepository.save(membre);
     }
 
@@ -29,5 +35,15 @@ public class MembreService {
 
     public void deleteById(Integer id) {
         membreRepository.deleteById(id);
+    }
+    public boolean IsMembre(String email, String password) {
+        Membre membre = membreRepository.findByAdresseMail(email);
+        if (membre != null && membre.getMdp().equals(password)) {
+            return true; // Authentification réussie
+        }
+        return false; // Échec de l'authentification
+    }
+    public Membre findByAdresseMail(String adresseMail) {
+        return membreRepository.findByAdresseMail(adresseMail);
     }
 }

@@ -14,6 +14,25 @@ public class MouvementMembre {
     @ManyToOne
     @JoinColumn(name = "idTypeMouvement")
     private TypeMouvementMembre idTypeMouvement;
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public Membre getIdMembre() {
+        return idMembre;
+    }
+    public void setIdMembre(Membre idMembre) {
+        this.idMembre = idMembre;
+    }
+    public TypeMouvementMembre getIdTypeMouvement() {
+        return idTypeMouvement;
+    }
+    public void setIdTypeMouvement(TypeMouvementMembre idTypeMouvement) {
+        this.idTypeMouvement = idTypeMouvement;
+    }
+    
 
     // Getters and Setters
 }

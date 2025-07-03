@@ -39,9 +39,4 @@ public class AdherentController {
         adherentService.deleteById(id);
     }
 
-    @GetMapping("/login")
-    public String Login()
-    {
-        return "login";
-    }
 }
