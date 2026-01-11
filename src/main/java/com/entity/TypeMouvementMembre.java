@@ -9,6 +9,19 @@ public class TypeMouvementMembre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String typeMouvement;
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public String getTypeMouvement() {
+        return typeMouvement;
+    }
+    public void setTypeMouvement(String typeMouvement) {
+        this.typeMouvement = typeMouvement;
+    }
+    
 
     // Getters and Setters
 }

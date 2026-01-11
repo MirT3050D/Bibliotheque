@@ -1,89 +1,61 @@
-:root {
-    --primary-color: #2C3E50;      /* Bleu foncé */
-    --secondary-color: #4B4F2B;    /* Vert olive foncé */
-    --accent-color: #4F2E2B;       /* Bordeaux foncé */
-    --text-color: #919AA4;         /* Gris bleu clair */
-    --background-light: #C9CF9B;   /* Vert clair */
-}
-
-/* Container principal en flex horizontal */
-.main {
-    display: flex;
-    height: 100vh;
+/* login.css */
+body {
+    background: #f5f6fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-light);
 }
 
-/* Partie droite : formulaire */
-.right {
-    flex: 1;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px 50px;
-    box-sizing: border-box;
-    box-shadow: 0 0 15px rgba(44, 62, 80, 0.3); /* léger ombrage avec bleu foncé */
+.form-container {
+    background: #fff;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08);
 }
 
-/* Labels */
-.label_mail, .label_mdpo {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--primary-color);
-    font-size: 1.1rem;
+h2 {
+    text-align: center;
+    color: #273c75;
+    margin-bottom: 24px;
 }
 
-/* Inputs */
-.mail, .mdp {
-    padding: 12px 15px;
-    margin-bottom: 25px;
+form label {
+    display: block;
+    margin-top: 16px;
+    color: #353b48;
+    font-weight: 500;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px 8px;
+    margin-top: 6px;
+    border: 1px solid #dcdde1;
     border-radius: 6px;
-    border: 1px solid var(--text-color);
-    font-size: 1rem;
-    color: var(--primary-color);
-    transition: border-color 0.3s ease;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
-.mail:focus, .mdp:focus {
-    border-color: var(--secondary-color);
+form input:focus,
+form select:focus {
+    border-color: #4078c0;
     outline: none;
 }
 
-/* Bouton submit */
-.submit {
-    background-color: var(--secondary-color);
-    color: white;
-    font-weight: 700;
+form button {
+    background: #4078c0;
+    color: #fff;
     border: none;
-    padding: 14px;
-    border-radius: 6px;
+    margin-top: 22px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    transition: background 0.2s;
 }
 
-.submit:hover {
-    background-color: var(--accent-color);
-}
-
-/* Partie gauche : image */
-.left {
-    flex: 1;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left img {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-}
-.img
-{
-    border-radius: 25%;
+form button:hover {
+    background: #273c75;
 }

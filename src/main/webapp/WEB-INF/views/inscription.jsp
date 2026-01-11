@@ -11,7 +11,7 @@
 <div class="form-container">
     <h2>Inscription Membre</h2>
 
-    <form action="/membre/save" method="post">
+    <form action="enregistrer" method="post">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required>
 
@@ -27,9 +27,9 @@
         <label for="mdp">Mot de passe :</label>
         <input type="password" id="mdp" name="mdp" required>
 
-        <label for="idStatus">Statut :</label>
-        <select name="idStatus" id="idStatus" required>
-            <c:forEach var="s" items="${statuts}">
+        <label for="idAdherent">Statut :</label>
+        <select name="idAdherent" id="idAdherent" required>
+            <c:forEach var="s" items="${adherents}">
                 <option value="${s.id}">${s.statut}</option>
             </c:forEach>
         </select>
